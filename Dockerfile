@@ -1,5 +1,6 @@
 FROM node:14
-WORKDIR /usr/src/app
+#WORKDIR /usr/src/app
+WORKDIR external/app
 COPY package*.json ./
 RUN npm install
 COPY . .
