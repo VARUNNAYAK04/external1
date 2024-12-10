@@ -1,8 +1,8 @@
 FROM node:14
 #WORKDIR /usr/src/app
-WORKDIR external/app
+WORKDIR /app
 COPY package*.json ./
-RUN npm install
 COPY . .
-EXPOSE 3000
+RUN yarn --install production
 CMD [ "node", "app.js" ]
+EXPOSE 3000
